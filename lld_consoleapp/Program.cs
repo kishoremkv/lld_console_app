@@ -2,6 +2,7 @@
 
 
 using lld_console_app.DecoratorPattern;
+using lld_console_app.FactoryPattern;
 using lld_console_app.Observable;
 using lld_console_app.ObserverPattern.Observable;
 using lld_console_app.ObserverPattern.Observer;
@@ -29,15 +30,26 @@ using lld_console_app.ObserverPattern.Observer;
 
 // Decorator Pattern -> Adding Toppings to the base functionality
 
-Magerita mPizza = new Magerita();
+// Magerita mPizza = new Magerita();
 
-ToppingsDecorator pizzaExtraCheese = new ExtraCheese(mPizza);
+// ToppingsDecorator pizzaExtraCheese = new ExtraCheese(mPizza);
 
-Console.WriteLine(pizzaExtraCheese.Cost());
+// Console.WriteLine(pizzaExtraCheese.Cost());
 
-ToppingsDecorator pizzaECMushroom = new ExtraCheese(new Mushroom(mPizza));  
-Console.WriteLine(pizzaECMushroom.Cost());
+// ToppingsDecorator pizzaECMushroom = new ExtraCheese(new Mushroom(mPizza));  
+// Console.WriteLine(pizzaECMushroom.Cost());
 
-ToppingsDecorator pizzaMushroom = new Mushroom(mPizza);
-Console.WriteLine(pizzaMushroom.Cost());
+// ToppingsDecorator pizzaMushroom = new Mushroom(mPizza);
+// Console.WriteLine(pizzaMushroom.Cost());
+
+
+
+// Factory Pattern -> Get shape of circle (1) and Rectangle (2)
+
+ShapeFactory shapeFactory = new ShapeFactory();
+shapeFactory.GetShape(1).draw();
+shapeFactory.GetShape(2).draw();
+
+
+
 
