@@ -1,6 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
 
+using lld_console_app.ChainOfResponsibility.Logging;
 using lld_console_app.DecoratorPattern;
 using lld_console_app.FactoryPattern;
 using lld_console_app.Observable;
@@ -46,9 +47,17 @@ using lld_console_app.ObserverPattern.Observer;
 
 // Factory Pattern -> Get shape of circle (1) and Rectangle (2)
 
-ShapeFactory shapeFactory = new ShapeFactory();
-shapeFactory.GetShape(1).draw();
-shapeFactory.GetShape(2).draw();
+// ShapeFactory shapeFactory = new ShapeFactory();
+// shapeFactory.GetShape(1).draw();
+// shapeFactory.GetShape(2).draw();
+
+// Chain of Resposibiity Design Pattern -> call next handler until we get the desired result
+
+LogHandler logHandler = new InfoLog(new DebugLog(new ErrorLog(null)));
+
+logHandler.Log("ERROR");
+logHandler.Log("INFO");
+logHandler.Log("DEBUG");    
 
 
 
