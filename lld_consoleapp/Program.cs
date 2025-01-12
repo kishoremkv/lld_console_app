@@ -53,11 +53,17 @@ using lld_console_app.ObserverPattern.Observer;
 
 // Chain of Resposibiity Design Pattern -> call next handler until we get the desired result
 
-LogHandler logHandler = new InfoLog(new DebugLog(new ErrorLog(null)));
+// LogHandler logHandler = new InfoLog(new DebugLog(new ErrorLog(null)));
 
-logHandler.Log("ERROR");
-logHandler.Log("INFO");
-logHandler.Log("DEBUG");    
+// logHandler.Log("ERROR");
+// logHandler.Log("INFO");
+// logHandler.Log("DEBUG");    
+
+
+// Implement Tic Tac Toe
+
+Game game = new Game();
+game.StartGame();
 
 
 
