@@ -39,7 +39,7 @@ namespace lld_console_app.ObserverPattern.Observable
             this._observers.Remove(displayObserver);
         }
 
-        public void setTemperature(int temperature)
+        public void SetTemperature(int temperature)
         {
             this.temperature = temperature;
             Notify();

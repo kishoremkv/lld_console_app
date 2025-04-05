@@ -12,7 +12,7 @@ namespace lld_console_app.ObserverPattern.Observable
         public void Add(IDisplayObserver displayObserver);
         public void Remove(IDisplayObserver displayObserver);
         public void Notify();
-        public void setTemperature(int temperature);
+        public void SetTemperature(int temperature);
         public int GetTemperature();
     }
 }
