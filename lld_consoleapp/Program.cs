@@ -1,6 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
 
+using lld_console_app.ATMMain;
 using lld_console_app.ChainOfResponsibility.Logging;
 using lld_console_app.DecoratorPattern;
 using lld_console_app.FactoryPattern;
@@ -66,7 +67,9 @@ using lld_console_app.TaskManagement;
 // Game game = new Game();
 // game.StartGame();
 
-TaskManagementSystemDemo.Run();
+// TaskManagementSystemDemo.Run();
+
+ATMMain.Run();
 
 
 
