@@ -1,6 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
 
+using lld_console_app.ArithematicCalculation;
 using lld_console_app.ATMMain;
 using lld_console_app.ChainOfResponsibility.Logging;
 using lld_console_app.DecoratorPattern;
@@ -69,7 +70,8 @@ using lld_console_app.TaskManagement;
 
 // TaskManagementSystemDemo.Run();
 
-ATMMain.Run();
+// ATMMain.Run();
+ArithematicCalculation.Run();
 
 
 
